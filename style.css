@@ -86,7 +86,7 @@ nav a{
 .work{
     /* background-color: lightcoral; */
     height: 100vh;
-    font-size: 100px;
+    font-size: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;    
