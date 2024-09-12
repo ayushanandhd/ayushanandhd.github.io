@@ -1,2 +1,2 @@
-# ayushanandhd.github.io
-My Personal Website created using html and css
+# Portfolio 🚀
+### My minimal and elegant portfolio website that I created using plain HTML and CSS. 
