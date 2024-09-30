@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif, Helvetica;
     color: #FAFAFA;
 }
 body{
     background-color: #08090A;
     font-size: 20px;
+    font-weight: 200;
 }
 .container{
     /* border: 2px solid red; */
@@ -44,7 +45,7 @@ body{
 
 .title{
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 5px;
 }
 
