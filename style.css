@@ -10,6 +10,7 @@ body{
     font-size: 20px;
     font-weight: 200;
     letter-spacing: 1px;
+    overflow: hidden;
 }
 .container{
     /* border: 2px solid red; */
@@ -75,4 +76,28 @@ body{
 
 .social-icon{
     margin-right: 10px;
+}
+
+
+#cursor-blur {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+#cursor {
+    position: fixed;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: white;
+    pointer-events: none;
+    z-index: 2;
+    transform: translate(-50%, -50%);
 }
