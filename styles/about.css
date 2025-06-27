@@ -44,7 +44,7 @@ a:hover {
   text-align: center;
 }
 
-.hero-text span {
+.hero-text span.minimalism {
   font-weight: 100;
   font-style: italic;
 }
