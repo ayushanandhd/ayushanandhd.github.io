@@ -29,7 +29,7 @@ a:hover {
 }
 
 .hero-container {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,4 +47,17 @@ a:hover {
 .hero-text span.minimalism {
   font-weight: 100;
   font-style: italic;
+}
+
+@media only screen and (max-width: 850px) {
+  .hero-text{
+    font-size: 7vw;
+  }
+  a{
+    font-size: 4vw;
+  }
+
+  .hero-container{
+    padding: 10vw;
+  }
 }
