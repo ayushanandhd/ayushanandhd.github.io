@@ -1,0 +1,35 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: 500;
+    letter-spacing: -2px;
+}
+body {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+    font-size: 15vh;
+    padding: 5vh;
+}
+
+.container li a {
+    text-decoration: none;
+    color: black;
+}
+
+.container li a:hover{
+    cursor: pointer;
+    color: hsl(0, 0%, 20%);
+}
