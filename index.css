@@ -1,0 +1,207 @@
+/* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f5;
+            color: #1a1a1a;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+        }
+
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;  /* Changed from padding: 2rem */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            z-index: 100;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+            animation-delay: 0.05s;
+            /* removed the color property */
+        }
+
+        .header-column h2 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            color: #666666;
+        }
+
+        .header-column p, 
+        .header-column a {
+            font-size: 0.9rem;
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600; /* Added bold weight */
+        }
+
+        /* Navigation link styles */
+        .header-column a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        /* Inactive navigation links */
+        .header-column a.inactive {
+            color: #666666;
+        }
+
+        /* Dark mode override for inactive navigation links */
+        body.dark-mode .header-column a.inactive {
+            color: #999999;
+        }
+
+        .header-column a:hover {
+            opacity: 0.7;
+        }
+
+        .header-column a[href="#work"],
+        .header-column a[href="#contact"] {
+            color: #666666;
+        }
+
+        /* Dark mode override for header titles */
+        body.dark-mode .header-column h2 {
+            color: #999999; /* Lighter grey for dark mode */
+        }
+
+        /* Dark mode override for grey navigation links */
+        body.dark-mode .header-column a[href="#work"],
+        body.dark-mode .header-column a[href="#contact"] {
+            color: #999999;
+        }
+
+        /* Keep the existing hover effect */
+        .header-column a[href="#work"]:hover,
+        .header-column a[href="#contact"]:hover {
+            opacity: 0.7;
+        }
+
+        .header-right {
+            text-align: right;
+        }
+
+        /* Theme link colors */
+        #dark-mode {
+            color: #666666; /* Grey color for dark mode link in light mode */
+        }
+
+        /* Dark mode overrides */
+        body.dark-mode #light-mode {
+            color: #999999; /* Grey color for light mode link in dark mode */
+        }
+
+        body.dark-mode #dark-mode {
+            color: inherit; /* Reset dark mode link color in dark mode */
+        }
+
+        /* Keep hover effects */
+        #light-mode:hover,
+        #dark-mode:hover {
+            opacity: 0.7;
+        }
+
+        /* Main content styles */
+        main {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8rem 2rem 2rem 2rem; /* Increased top padding to account for fixed header */
+            opacity: 0;
+            animation: fadeIn 0.1s ease-in forwards;
+            animation-delay: 0.2s;
+        }
+
+        .portrait-placeholder {
+            width: 250px;
+            height: 320px;
+            background-color: #000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        @font-face {
+            font-family: 'Bile';
+            src: url('bile.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .main-name {
+            font-family: "Bile", monospace;
+            font-optical-sizing: auto;
+            font-weight: 300; /* Changed from 700 to 300 for a thinner appearance */
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+            font-size: 10vw; /* Changed from 15vw to 10vw */
+            text-align: center;
+            line-height: 1;
+            margin-top: auto;
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            position: relative;
+            padding: 0 2rem;
+        }
+
+        /* Fade-in animation keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+                padding: 1rem;
+            }
+
+            .header-column h2 {
+                margin-bottom: 0.1rem;  /* Reduced from 0.3rem */
+            }
+
+            .header-column a {
+                letter-spacing: -0.03em;  /* Even tighter spacing for mobile */
+            }
+
+            .header-right {
+                text-align: left;
+            }
+
+            main {
+                padding: 15rem 2rem 2rem 2rem;
+            }
+
+            .main-name {
+                font-size: 13vw; /* Changed from 18vw to 13vw */
+                margin-left: -2rem;
+                margin-right: -2rem;
+            }
+        }

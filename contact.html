@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush Anand</title>
+    <title>Work - Ayush Anand</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +23,9 @@
         <div class="header-column">
             <h2>Navigation:</h2>
             <p>
-                <a href="/">Index</a>,
-                <a href="/work.html" class="inactive">Work</a>,
-                <a href="/contact.html" class="inactive">Contact</a>
+                <a href="index.html" class="inactive">Index</a>,
+                <a href="work.html" class="inactive">Work</a>,
+                <a href="contact.html">Contact</a>
             </p>
         </div>
         <div class="header-column header-right">
@@ -36,28 +36,11 @@
             </p>
         </div>
     </header>
-
     <main>
-        <div class="portrait-placeholder"></div>
-        <h1 class="main-name">Ayush Anand</h1>
+        <!-- Add your work content here -->
     </main>
 
     <script>
-        // Theme toggling functionality
-        const lightMode = document.getElementById('light-mode');
-        const darkMode = document.getElementById('dark-mode');
-        const body = document.body;
-
-        lightMode.addEventListener('click', (e) => {
-            e.preventDefault();
-            body.classList.remove('dark-mode');
-        });
-
-        darkMode.addEventListener('click', (e) => {
-            e.preventDefault();
-            body.classList.add('dark-mode');
-        });
-
         // Dynamic time update
         function updateTime() {
             const timeElement = document.getElementById('current-time');
@@ -73,6 +56,22 @@
         // Update time immediately and then every minute
         updateTime();
         setInterval(updateTime, 60000);
+    </script>
+    <script>
+        // Theme toggling functionality
+        const lightMode = document.getElementById('light-mode');
+        const darkMode = document.getElementById('dark-mode');
+        const body = document.body;
+
+        lightMode.addEventListener('click', (e) => {
+            e.preventDefault();
+            body.classList.remove('dark-mode');
+        });
+
+        darkMode.addEventListener('click', (e) => {
+            e.preventDefault();
+            body.classList.add('dark-mode');
+        });
     </script>
 </body>
 </html>
