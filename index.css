@@ -205,3 +205,111 @@
                 margin-right: -2rem;
             }
         }
+
+/* Work links container styles */
+.work-links-container {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 500px;
+    background-color: rgba(245, 245, 245, 0.95);
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+    animation-delay: 0.3s;
+}
+
+/* Dark mode styles for work links container */
+body.dark-mode .work-links-container {
+    background-color: rgba(26, 26, 26, 0.95);
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+}        .work-link {
+            display: grid;
+            grid-template-columns: 50px 1fr auto auto;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            text-decoration: none; /* Remove underline from links */
+            color: inherit; /* Inherit text color from parent */
+        }
+
+        .work-link:last-child {
+            border-bottom: none;
+        }
+
+        .work-link:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Dark mode styles for work links */
+        body.dark-mode .work-link {
+            border-bottom: 1px solid #333333;
+            color: inherit; /* Ensure color inheritance in dark mode */
+        }
+
+        body.dark-mode .work-link:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+.work-number {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #666666;
+}
+
+.work-title {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    letter-spacing: 0.02em;
+}
+
+.work-pics {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #666666;
+    margin-right: 1rem;
+}        .work-arrow {
+            font-size: 1rem;
+            color: #666666;
+        }
+
+        /* Dark mode overrides for work link elements */
+        body.dark-mode .work-number,
+        body.dark-mode .work-pics,
+        body.dark-mode .work-arrow {
+            color: #999999;
+        }
+
+        /* Responsive styles for work links */
+        @media (max-width: 768px) {
+            .work-links-container {
+                width: calc(100vw - 2rem);
+                left: 1rem;
+                bottom: 1rem;
+            }
+            
+            .work-link {
+                grid-template-columns: 40px 1fr auto auto;
+                padding: 0.8rem;
+            }
+            
+            .work-title {
+                font-size: 0.8rem;
+                margin-left: 0.5rem;
+            }
+            
+            .work-number {
+                font-size: 0.8rem;
+            }
+            
+            .work-pics {
+                font-size: 0.7rem;
+                margin-right: 0.5rem;
+            }
+        }
