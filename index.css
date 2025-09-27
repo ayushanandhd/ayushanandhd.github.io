@@ -125,9 +125,10 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Changed from center to flex-start */
             align-items: center;
-            padding: 8rem 2rem 2rem 2rem; /* Increased top padding to account for fixed header */
+            padding-top: 8rem; /* Add top padding to account for fixed header */
+            padding-bottom: 2rem;
             opacity: 0;
             animation: fadeIn 0.1s ease-in forwards;
             animation-delay: 0.2s;
@@ -154,7 +155,7 @@
             font-weight: 300; /* Changed from 700 to 300 for a thinner appearance */
             font-style: normal;
             font-variation-settings: "wdth" 100;
-            font-size: 10vw; /* Changed from 15vw to 10vw */
+            font-size: 20vw; /* Increased from 10vw to 20vw for full width */
             text-align: center;
             line-height: 1;
             margin-top: auto;
@@ -162,7 +163,9 @@
             margin-left: 0;
             margin-right: 0;
             position: relative;
-            padding: 0 2rem;
+            padding: 0; /* Removed padding to allow full width */
+            overflow: hidden; /* Prevent horizontal scrolling if text is too wide */
+            white-space: nowrap; /* Keep text on one line */
         }
 
         /* Fade-in animation keyframes */
@@ -184,11 +187,11 @@
             }
 
             .header-column h2 {
-                margin-bottom: 0.1rem;  /* Reduced from 0.3rem */
+                margin-bottom: 0.1rem;
             }
 
             .header-column a {
-                letter-spacing: -0.03em;  /* Even tighter spacing for mobile */
+                letter-spacing: -0.03em;
             }
 
             .header-right {
@@ -196,22 +199,24 @@
             }
 
             main {
-                padding: 10rem 2rem 2rem 2rem; /* Reduced from 15rem to 8rem */
+                padding-top: 16rem; /* Significantly increased to 16rem to prevent overlap with stacked header columns */
+                padding-bottom: 2rem;
                 min-height: 100vh;
-                justify-content: center; /* Ensure content is centered */
+                justify-content: flex-start; /* Keep flex-start for mobile too */
             }
 
             .portrait-placeholder {
-                width: 200px; /* Reduced from 250px */
-                height: 256px; /* Reduced proportionally from 320px */
-                margin-bottom: 1rem; /* Reduced from 2rem */
+                width: 200px;
+                height: 256px;
+                margin-bottom: 1rem;
             }
 
             .main-name {
-                font-size: 15vw; /* Increased from 13vw for better visibility */
-                margin-left: -2rem;
-                margin-right: -2rem;
-                margin-top: 0; /* Ensure no extra top margin */
+                font-size: 18vw; /* Increased from 15vw to 18vw for mobile */
+                margin-left: 0; /* Removed negative margins */
+                margin-right: 0; /* Removed negative margins */
+                margin-top: 0;
+                padding: 0; /* Ensure no padding on mobile */
             }
         }
 
@@ -224,11 +229,13 @@
             }
 
             .main-name {
-                font-size: 12vw;
+                font-size: 19vw; /* Increased from 12vw to 19vw for tablet */
             }
 
             main {
-                padding: 10rem 2rem 2rem 2rem;
+                padding-top: 7rem; /* Medium top padding for tablet */
+                padding-bottom: 2rem;
+                justify-content: flex-start; /* Keep flex-start for tablet too */
             }
         }
 
