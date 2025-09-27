@@ -196,13 +196,39 @@
             }
 
             main {
-                padding: 15rem 2rem 2rem 2rem;
+                padding: 10rem 2rem 2rem 2rem; /* Reduced from 15rem to 8rem */
+                min-height: 100vh;
+                justify-content: center; /* Ensure content is centered */
+            }
+
+            .portrait-placeholder {
+                width: 200px; /* Reduced from 250px */
+                height: 256px; /* Reduced proportionally from 320px */
+                margin-bottom: 1rem; /* Reduced from 2rem */
             }
 
             .main-name {
-                font-size: 13vw; /* Changed from 18vw to 13vw */
+                font-size: 15vw; /* Increased from 13vw for better visibility */
                 margin-left: -2rem;
                 margin-right: -2rem;
+                margin-top: 0; /* Ensure no extra top margin */
+            }
+        }
+
+        /* Add tablet-specific styles */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .portrait-placeholder {
+                width: 220px;
+                height: 280px;
+                margin-bottom: 1.5rem;
+            }
+
+            .main-name {
+                font-size: 12vw;
+            }
+
+            main {
+                padding: 10rem 2rem 2rem 2rem;
             }
         }
 
