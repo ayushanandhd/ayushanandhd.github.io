@@ -134,10 +134,10 @@
             animation-delay: 0.2s;
         }
 
-        .portrait-placeholder {
+        .portrait-image {
             width: 250px;
             height: 320px;
-            background-color: #000;
+            object-fit: cover;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
         }
@@ -200,12 +200,12 @@
 
             main {
                 padding-top: 16rem; /* Significantly increased to 16rem to prevent overlap with stacked header columns */
-                padding-bottom: 2rem;
+                padding-bottom: 0;
                 min-height: 100vh;
                 justify-content: flex-start; /* Keep flex-start for mobile too */
             }
 
-            .portrait-placeholder {
+            .portrait-image {
                 width: 200px;
                 height: 256px;
                 margin-bottom: 1rem;
@@ -215,14 +215,14 @@
                 font-size: 18vw; /* Increased from 15vw to 18vw for mobile */
                 margin-left: 0; /* Removed negative margins */
                 margin-right: 0; /* Removed negative margins */
-                margin-top: 0;
+                margin-top: 3rem;
                 padding: 0; /* Ensure no padding on mobile */
             }
         }
 
         /* Add tablet-specific styles */
         @media (max-width: 1024px) and (min-width: 769px) {
-            .portrait-placeholder {
+            .portrait-image {
                 width: 220px;
                 height: 280px;
                 margin-bottom: 1.5rem;
