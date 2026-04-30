@@ -1,109 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Work - Ayush Anand</title>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
     <header>
-        <div class="header-column">
-            <h2>Ayush Anand:</h2>
-            <p>Software Engineer</p>
-        </div>
-        <div class="header-column">
-            <h2>Location:</h2>
-            <p>Patna, India (<span id="current-time"></span>)</p>
-        </div>
-        <div class="header-column">
-            <h2>Navigation:</h2>
-            <p>
-                <a href="index.html" class="inactive">Index</a>,
-                <a href="work.html">Work</a>,
-                <a href="contact.html" class="inactive">Contact</a>
-            </p>
-        </div>
-        <div class="header-column header-right">
-            <h2>Theme:</h2>
-            <p>
-                <a href="#" id="light-mode">Light Mode</a>,
-                <a href="#" id="dark-mode">Dark Mode</a>
-            </p>
-        </div>
+      <div class="header-column">
+        <h2>Ayush Anand:</h2>
+        <p>Software Engineer</p>
+      </div>
+      <div class="header-column">
+        <h2>Location:</h2>
+        <p>Patna, India (<span id="current-time"></span>)</p>
+      </div>
+      <div class="header-column">
+        <h2>Navigation:</h2>
+        <p>
+          <a href="index.html" class="inactive">Index</a>,
+          <a href="work.html">Work</a>,
+          <a href="contact.html" class="inactive">Contact</a>
+        </p>
+      </div>
+      <div class="header-column header-right">
+        <h2>Theme:</h2>
+        <p>
+          <a href="#" id="light-mode">Light Mode</a>,
+          <a href="#" id="dark-mode">Dark Mode</a>
+        </p>
+      </div>
     </header>
     <main>
-        <!-- Work links container -->
-        <div class="work-links-container">
-            <a href="https://thesongwenevershared.vercel.app" target="_blank" class="work-link">
-                <span class="work-number">01</span>
-                <span class="work-title">THE SONG WE NEVER SHARED</span>
-                <span class="work-pics">VISIT</span>
-                <span class="work-arrow">↗</span>
-            </a>
-            <a href="https://minimalspotifystats.vercel.app" target="_blank" class="work-link">
-                <span class="work-number">02</span>
-                <span class="work-title">MINIMAL SPOTIFY STATS</span>
-                <span class="work-pics">VISIT</span>
-                <span class="work-arrow">↗</span>
-            </a>
-            <a href="https://moodify-two-theta.vercel.app" target="_blank" class="work-link">
-                <span class="work-number">03</span>
-                <span class="work-title">MOODIFY</span>
-                <span class="work-pics">VISIT</span>
-                <span class="work-arrow">↗</span>
-            </a>
-            <a href="https://ai-roadmap-six.vercel.app" target="_blank" class="work-link">
-                <span class="work-number">04</span>
-                <span class="work-title">AI ROADMAP</span>
-                <span class="work-pics">VISIT</span>
-                <span class="work-arrow">↗</span>
-            </a>
-            <a href="https://lofipomodoro.vercel.app" target="_blank" class="work-link">
-                <span class="work-number">05</span>
-                <span class="work-title">LOFI POMODORO</span>
-                <span class="work-pics">VISIT</span>
-                <span class="work-arrow">↗</span>
-            </a>
-        </div>
+      <!-- Work links container -->
+      <div class="work-links-container">
+        <a
+          href="https://thesongwenevershared.vercel.app"
+          target="_blank"
+          class="work-link"
+        >
+          <span class="work-number">01</span>
+          <span class="work-title">THE SONG WE NEVER SHARED</span>
+          <span class="work-pics">VISIT</span>
+          <span class="work-arrow">↗</span>
+        </a>
+
+        <a
+          href="https://moodify-two-theta.vercel.app"
+          target="_blank"
+          class="work-link"
+        >
+          <span class="work-number">03</span>
+          <span class="work-title">MOODIFY</span>
+          <span class="work-pics">VISIT</span>
+          <span class="work-arrow">↗</span>
+        </a>
+        <a
+          href="https://ai-roadmap-six.vercel.app"
+          target="_blank"
+          class="work-link"
+        >
+          <span class="work-number">04</span>
+          <span class="work-title">AI ROADMAP</span>
+          <span class="work-pics">VISIT</span>
+          <span class="work-arrow">↗</span>
+        </a>
+        <a
+          href="https://lofipomodoro.vercel.app"
+          target="_blank"
+          class="work-link"
+        >
+          <span class="work-number">05</span>
+          <span class="work-title">LOFI POMODORO</span>
+          <span class="work-pics">VISIT</span>
+          <span class="work-arrow">↗</span>
+        </a>
+      </div>
     </main>
 
     <script>
-        // Dynamic time update
-        function updateTime() {
-            const timeElement = document.getElementById('current-time');
-            const now = new Date();
-            const hours = now.getHours();
-            const minutes = now.getMinutes();
-            const ampm = hours >= 12 ? 'PM' : 'AM';
-            const formattedHours = hours % 12 || 12;
-            const formattedMinutes = minutes.toString().padStart(2, '0');
-            timeElement.textContent = `${formattedHours}:${formattedMinutes} ${ampm}`;
-        }
+      // Dynamic time update
+      function updateTime() {
+        const timeElement = document.getElementById("current-time");
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const ampm = hours >= 12 ? "PM" : "AM";
+        const formattedHours = hours % 12 || 12;
+        const formattedMinutes = minutes.toString().padStart(2, "0");
+        timeElement.textContent = `${formattedHours}:${formattedMinutes} ${ampm}`;
+      }
 
-        // Update time immediately and then every minute
-        updateTime();
-        setInterval(updateTime, 60000);
+      // Update time immediately and then every minute
+      updateTime();
+      setInterval(updateTime, 60000);
     </script>
     <script>
-        // Theme toggling functionality
-        const lightMode = document.getElementById('light-mode');
-        const darkMode = document.getElementById('dark-mode');
-        const body = document.body;
+      // Theme toggling functionality
+      const lightMode = document.getElementById("light-mode");
+      const darkMode = document.getElementById("dark-mode");
+      const body = document.body;
 
-        lightMode.addEventListener('click', (e) => {
-            e.preventDefault();
-            body.classList.remove('dark-mode');
-        });
+      lightMode.addEventListener("click", (e) => {
+        e.preventDefault();
+        body.classList.remove("dark-mode");
+      });
 
-        darkMode.addEventListener('click', (e) => {
-            e.preventDefault();
-            body.classList.add('dark-mode');
-        });
+      darkMode.addEventListener("click", (e) => {
+        e.preventDefault();
+        body.classList.add("dark-mode");
+      });
     </script>
-</body>
+  </body>
 </html>
