@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Ayush Anand</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-column">
+        <h2>Ayush Anand:</h2>
+        <p>Software Engineer</p>
+      </div>
+      <div class="header-column">
+        <h2>Location:</h2>
+        <p>Patna, India (<span id="current-time"></span>)</p>
+      </div>
+      <div class="header-column">
+        <h2>Navigation:</h2>
+        <p>
+          <a href="../index.html" class="inactive">Index</a>,
+          <a href="../work.html" class="inactive">Work</a>,
+          <a href="../resume.html">Resume</a>,
+          <a href="../contact.html" class="inactive">Contact</a>
+        </p>
+      </div>
+      <div class="header-column header-right">
+        <h2>Theme:</h2>
+        <p>
+          <a href="#" id="light-mode">Light Mode</a>,
+          <a href="#" id="dark-mode">Dark Mode</a>
+        </p>
+      </div>
+    </header>
+
+    <main class="resume-main">
+      <div class="resume-toolbar">
+        <a href="../resume.pdf" target="_blank" class="resume-btn">
+          Open in New Tab ↗
+        </a>
+        <a href="../resume.pdf" download="Ayush_Anand_Resume.pdf" class="resume-btn">
+          Download PDF ↓
+        </a>
+      </div>
+
+      <div class="resume-container">
+        <object
+          data="../resume.pdf#toolbar=0&navpanes=0"
+          type="application/pdf"
+          class="resume-viewer"
+        >
+          <iframe src="../resume.pdf#toolbar=0" class="resume-viewer">
+            <p>
+              Your browser does not support embedded PDFs.
+              <a href="../resume.pdf" target="_blank">Click here to view or download the resume</a>.
+            </p>
+          </iframe>
+        </object>
+      </div>
+    </main>
+
+    <script>
+      // Dynamic time update
+      function updateTime() {
+        const timeElement = document.getElementById("current-time");
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const ampm = hours >= 12 ? "PM" : "AM";
+        const formattedHours = hours % 12 || 12;
+        const formattedMinutes = minutes.toString().padStart(2, "0");
+        timeElement.textContent = `${formattedHours}:${formattedMinutes} ${ampm}`;
+      }
+
+      updateTime();
+      setInterval(updateTime, 60000);
+    </script>
+    <script>
+      // Theme toggling functionality
+      const lightMode = document.getElementById("light-mode");
+      const darkMode = document.getElementById("dark-mode");
+      const body = document.body;
+
+      lightMode.addEventListener("click", (e) => {
+        e.preventDefault();
+        body.classList.remove("dark-mode");
+      });
+
+      darkMode.addEventListener("click", (e) => {
+        e.preventDefault();
+        body.classList.add("dark-mode");
+      });
+    </script>
+  </body>
+</html>
